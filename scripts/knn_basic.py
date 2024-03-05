@@ -9,7 +9,12 @@ import pandas as pd
 
 ROOT = pathlib.Path(__file__).parent.parent.resolve().joinpath("data")
 
-data = pd.read_csv(ROOT.joinpath("data.csv"))
+DATA_FILE = ROOT.joinpath("data_normal.csv")
+
+if not DATA_FILE.is_file():
+    import preprocess
+
+data = pd.read_csv(DATA_FILE)
 
 # Create feature and target arrays
 X = data.drop(columns = ['Target'])

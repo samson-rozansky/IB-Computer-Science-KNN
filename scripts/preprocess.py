@@ -22,4 +22,4 @@ for index, row in data_normal.iterrows():
 
 df = pd.DataFrame(ret)
 df.reset_index()
-df.to_csv(ROOT.joinpath("data.csv"), index = False)
+df.to_csv(ROOT.joinpath("data_normal.csv"), index = False)
