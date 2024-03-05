@@ -1,17 +1,25 @@
 # Import necessary modules
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import train_test_split
-from sklearn import datasets, neighbors
 from mlxtend.plotting import plot_decision_regions
+from sklearn.decomposition import PCA
 
 import numpy as np
 import matplotlib.pyplot as plt
 import pathlib
 import pandas as pd
 
-ROOT = pathlib.Path(__file__).parent.parent.resolve().joinpath("data")
+from tqdm import tqdm
 
-data = pd.read_csv(ROOT.joinpath("data.csv"))
+ROOT = pathlib.Path(__file__).parent.parent.resolve().joinpath("data")
+OUTPUT = pathlib.Path(__file__).parent.parent.resolve().joinpath("figs\pca")
+
+DATA_FILE = ROOT.joinpath("data_normal.csv")
+
+if not DATA_FILE.is_file():
+    import preprocess
+
+data = pd.read_csv(DATA_FILE)
 
 # Create feature and target arrays
 X = data.drop(columns = ['Target'])
@@ -21,18 +29,20 @@ y = data['Target']
 X_train, X_test, y_train, y_test = train_test_split(
 			X, y, test_size = 0.2, random_state=42)
 
-def knn_comparison(data, k):
-    x = data.drop(columns = ['Target']).values
-    y = data['Target'].values
-    clf = neighbors.KNeighborsClassifier(n_neighbors=k)
-    clf.fit(x, y)
+pca = PCA(n_components=2)
+x = pca.fit_transform(X_train)
+y = y_train.to_numpy()
+x_test = pca.fit_transform(X_test)
 
-    plot_decision_regions(x, y, clf=clf, legend=2)
 
-    plt.xlabel('X')
-    plt.ylabel('Y')
-    plt.title('Knn with K='+ str(k))
-    plt.show()
+def train_KNN(k):
+    model = KNeighborsClassifier(n_neighbors=k, p = 2)
+    model = model.fit(x, y)
+    predictions = model.predict(x_test)
 
-for i in [1, 3, 5, 10]:
-    knn_comparison(data, i)
+    plot_decision_regions(x, y.astype(np.int_), clf = model, legend = 2)
+    plt.savefig(OUTPUT.joinpath("pca_" + str(k) + ".jpg"), bbox_inches = "tight", transparent = True, dpi = 600)
+    plt.clf()
+
+for i in tqdm(range(1, 51)):
+    train_KNN(i)
