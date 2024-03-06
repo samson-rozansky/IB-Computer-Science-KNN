@@ -7,8 +7,14 @@ import pathlib
 import pandas as pd
 
 ROOT = pathlib.Path(__file__).parent.parent.resolve().joinpath("data")
+OUTPUT = pathlib.Path(__file__).parent.parent.resolve().joinpath("figs")
 
-data = pd.read_csv(ROOT.joinpath("data.csv"))
+DATA_FILE = ROOT.joinpath("data_normal.csv")
+
+if not DATA_FILE.is_file():
+    import preprocess
+
+data = pd.read_csv(DATA_FILE)
 
 # Create feature and target arrays
 BruhEmoji = "Marital status,Father's occupation,Educational special needs,Age at enrollment,Curricular units 1st sem (enrolled),Curricular units 2nd sem (without evaluations),Application mode,Application order,Course,Daytime/evening attendance	,Previous qualification,Previous qualification (grade),Nacionality,Mother's qualification,Father's qualification,Mother's occupation,Admission grade,Displaced,Debtor,Tuition fees up to date,Gender,Scholarship holder,International,Curricular units 1st sem (credited),Curricular units 1st sem (evaluations),Curricular units 1st sem (approved),Curricular units 1st sem (grade),Curricular units 1st sem (without evaluations),Curricular units 2nd sem (credited),Curricular units 2nd sem (enrolled),Curricular units 2nd sem (evaluations),Curricular units 2nd sem (approved),Curricular units 2nd sem (grade),Unemployment rate,Inflation rate,GDP,Target"
@@ -62,4 +68,4 @@ plt.plot(neighbors, train_accuracy, label = 'Training dataset Accuracy')
 plt.legend()
 plt.xlabel('n_neighbors')
 plt.ylabel('Accuracy')
-plt.show()
+plt.savefig(OUTPUT.joinpath("RFE.png"), bbox_inches="tight", transparent = True)
