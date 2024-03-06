@@ -26,8 +26,7 @@ X = data.drop(columns = ['Target'])
 y = data['Target']
 
 # Split into training and test set
-X_train, X_test, y_train, y_test = train_test_split(
-			X, y, test_size = 0.2, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state=42)
 
 pca = PCA(n_components=2)
 x = pca.fit_transform(X_train)

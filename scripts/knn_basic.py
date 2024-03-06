@@ -7,6 +7,7 @@ import pathlib
 import pandas as pd
 
 ROOT = pathlib.Path(__file__).parent.parent.resolve().joinpath("data")
+OUTPUT = pathlib.Path(__file__).parent.parent.resolve().joinpath("figs")
 
 DATA_FILE = ROOT.joinpath("data_normal.csv")
 
@@ -43,4 +44,4 @@ plt.plot(neighbors, train_accuracy, label = 'Training dataset Accuracy')
 plt.legend()
 plt.xlabel('n_neighbors')
 plt.ylabel('Accuracy')
-plt.show()
+plt.savefig(OUTPUT.joinpath("neighbors_vs_accuracy.jpg"), bbox_inches = "tight", transparent = True, dpi = 600)
