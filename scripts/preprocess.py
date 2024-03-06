@@ -5,7 +5,7 @@ import pandas as pd
 
 ROOT = pathlib.Path(__file__).parent.parent.resolve().joinpath("data")
 
-data = pd.read_csv(ROOT.joinpath("data_raw.csv"), delimiter = ';')
+data = pd.read_csv(ROOT.joinpath("data_raw.csv"))
 
 data_normal = data.copy()
 for column in data_normal.columns[:36]:
