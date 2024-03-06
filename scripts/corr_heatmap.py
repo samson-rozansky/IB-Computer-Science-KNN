@@ -8,7 +8,7 @@ OUTPUT = pathlib.Path(__file__).parent.parent.resolve().joinpath("figs")
 
 DATA_FILE = ROOT.joinpath("data_raw.csv")
 
-df = pd.read_csv(DATA_FILE, delimiter = ";")
+df = pd.read_csv(DATA_FILE)
 
 correlations = np.round(df.corr().to_numpy(), decimals=2)
 
