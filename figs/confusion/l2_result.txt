@@ -1,0 +1,5 @@
+Evaluation Metrics for l2:
+Accuracy: 0.8663911845730028
+Recall: 0.9420935412026726
+F1 Score: 0.897136797454931
+Precision: 0.8562753036437247

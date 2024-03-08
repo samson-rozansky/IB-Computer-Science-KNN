@@ -24,13 +24,13 @@ y = data['Target']
 X_train, X_test, y_train, y_test = train_test_split(
 			X, y, test_size = 0.2, random_state=42)
 
-neighbors = np.arange(1, 11)
+neighbors = np.arange(1, 21)
 train_accuracy = np.empty(len(neighbors))
 test_accuracy = np.empty(len(neighbors))
 
 # Loop over K values
 for i, k in enumerate(neighbors):
-	knn = KNeighborsClassifier(n_neighbors=k)
+	knn = KNeighborsClassifier(n_neighbors=k, metric='l1')
 	knn.fit(X_train, y_train)
 	
 	# Compute training and test data accuracy

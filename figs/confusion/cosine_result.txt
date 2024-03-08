@@ -1,0 +1,5 @@
+Evaluation Metrics for cosine:
+Accuracy: 0.8705234159779615
+Recall: 0.9665924276169265
+F1 Score: 0.9022869022869023
+Precision: 0.8460038986354775
