@@ -22,7 +22,7 @@ data = pd.read_csv(DATA_FILE)
 X = data.drop(columns = ['Target'])
 y = data['Target']
 
-tsne = TSNE(n_components=2, random_state=42, init='pca')
+tsne = TSNE(n_components=2, random_state=42, init='pca', perplexity=10, early_exaggeration=24, metric='l1')
 X_tsne = tsne.fit_transform(X)
 
 x_0 = []
@@ -38,12 +38,10 @@ for i in range(y.size):
         x_1.append(X_tsne[i, 0])
         y_1.append(X_tsne[i, 1])
 
-plt.scatter(x=x_0, y=y_0, c='red', label='Dropout')
-plt.scatter(x=x_1, y=y_1, c='blue', label='Graduate')
+plt.scatter(x=x_0, y=y_0, c='tab:red', label='Dropout')
+plt.scatter(x=x_1, y=y_1, c='tab:green', label='Graduate')
 plt.ylabel('Second t-SNE')
 plt.xlabel('First t-SNE')
 plt.legend()
-
-plt.show()
-
+plt.savefig(OUTPUT.joinpath("tsne.jpg"), bbox_inches = "tight", transparent = True, dpi = 600)
 
