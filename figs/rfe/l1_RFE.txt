@@ -1,0 +1,102 @@
+Removed: Daytime/evening attendance	
+Accuracy: 0.8856749311294766
+
+Removed: Marital status
+Accuracy: 0.8884297520661157
+
+Removed: Previous qualification
+Accuracy: 0.8911845730027548
+
+Removed: Curricular units 1st sem (credited)
+Accuracy: 0.8953168044077136
+
+Removed: Nacionality
+Accuracy: 0.8953168044077136
+
+Removed: Educational special needs
+Accuracy: 0.8953168044077136
+
+Removed: International
+Accuracy: 0.8966942148760331
+
+Removed: Mother's occupation
+Accuracy: 0.8966942148760331
+
+Removed: Curricular units 1st sem (grade)
+Accuracy: 0.8994490358126722
+
+Removed: Unemployment rate
+Accuracy: 0.8994490358126722
+
+Removed: Curricular units 1st sem (without evaluations)
+Accuracy: 0.9008264462809917
+
+Removed: Course
+Accuracy: 0.8994490358126722
+
+Removed: Previous qualification (grade)
+Accuracy: 0.9008264462809917
+
+Removed: Curricular units 2nd sem (without evaluations)
+Accuracy: 0.9022038567493113
+
+Removed: Curricular units 2nd sem (enrolled)
+Accuracy: 0.9022038567493113
+
+Removed: Mother's qualification
+Accuracy: 0.9077134986225895
+
+Removed: Curricular units 2nd sem (credited)
+Accuracy: 0.90633608815427
+
+Removed: Admission grade
+Accuracy: 0.9035812672176309
+
+Removed: GDP
+Accuracy: 0.9077134986225895
+
+Removed: Inflation rate
+Accuracy: 0.90633608815427
+
+Removed: Curricular units 2nd sem (evaluations)
+Accuracy: 0.9104683195592287
+
+Removed: Displaced
+Accuracy: 0.9077134986225895
+
+Removed: Scholarship holder
+Accuracy: 0.90633608815427
+
+Removed: Father's occupation
+Accuracy: 0.9049586776859504
+
+Removed: Application order
+Accuracy: 0.9022038567493113
+
+Removed: Debtor
+Accuracy: 0.8980716253443526
+
+Removed: Curricular units 1st sem (enrolled)
+Accuracy: 0.8966942148760331
+
+Removed: Age at enrollment
+Accuracy: 0.8939393939393939
+
+Removed: Gender
+Accuracy: 0.8953168044077136
+
+Removed: Curricular units 2nd sem (grade)
+Accuracy: 0.8925619834710744
+
+Removed: Father's qualification
+Accuracy: 0.8842975206611571
+
+Removed: Curricular units 1st sem (approved)
+Accuracy: 0.8829201101928374
+
+Removed: Tuition fees up to date
+Accuracy: 0.871900826446281
+
+Removed: Curricular units 1st sem (evaluations)
+Accuracy: 0.8512396694214877
+

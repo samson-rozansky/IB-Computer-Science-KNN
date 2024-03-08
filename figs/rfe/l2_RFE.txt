@@ -1,0 +1,99 @@
+Removed: Inflation rate
+Accuracy: 0.8650137741046832
+
+Removed: Curricular units 1st sem (grade)
+Accuracy: 0.871900826446281
+
+Removed: Nacionality
+Accuracy: 0.8746556473829201
+
+Removed: Father's occupation
+Accuracy: 0.8774104683195593
+
+Removed: Curricular units 2nd sem (enrolled)
+Accuracy: 0.8801652892561983
+
+Removed: Unemployment rate
+Accuracy: 0.8815426997245179
+
+Removed: Course
+Accuracy: 0.8856749311294766
+
+Removed: Educational special needs
+Accuracy: 0.8884297520661157
+
+Removed: Curricular units 1st sem (without evaluations)
+Accuracy: 0.8911845730027548
+
+Removed: Marital status
+Accuracy: 0.8911845730027548
+
+Removed: Previous qualification
+Accuracy: 0.8953168044077136
+
+Removed: Application order
+Accuracy: 0.8980716253443526
+
+Removed: Mother's occupation
+Accuracy: 0.8994490358126722
+
+Removed: International
+Accuracy: 0.8994490358126722
+
+Removed: Tuition fees up to date
+Accuracy: 0.8953168044077136
+
+Removed: Curricular units 1st sem (evaluations)
+Accuracy: 0.8980716253443526
+
+Removed: Displaced
+Accuracy: 0.9008264462809917
+
+Removed: Age at enrollment
+Accuracy: 0.9077134986225895
+
+Removed: Curricular units 2nd sem (grade)
+Accuracy: 0.90633608815427
+
+Removed: Curricular units 2nd sem (credited)
+Accuracy: 0.90633608815427
+
+Removed: GDP
+Accuracy: 0.90633608815427
+
+Removed: Curricular units 2nd sem (without evaluations)
+Accuracy: 0.9104683195592287
+
+Removed: Curricular units 1st sem (credited)
+Accuracy: 0.9008264462809917
+
+Removed: Father's qualification
+Accuracy: 0.8953168044077136
+
+Removed: Gender
+Accuracy: 0.8953168044077136
+
+Removed: Curricular units 2nd sem (evaluations)
+Accuracy: 0.8939393939393939
+
+Removed: Previous qualification (grade)
+Accuracy: 0.8939393939393939
+
+Removed: Curricular units 1st sem (approved)
+Accuracy: 0.8870523415977961
+
+Removed: Mother's qualification
+Accuracy: 0.8911845730027548
+
+Removed: Debtor
+Accuracy: 0.8815426997245179
+
+Removed: Curricular units 1st sem (enrolled)
+Accuracy: 0.8622589531680441
+
+Removed: Admission grade
+Accuracy: 0.859504132231405
+
+Removed: Scholarship holder
+Accuracy: 0.7672176308539945
+
